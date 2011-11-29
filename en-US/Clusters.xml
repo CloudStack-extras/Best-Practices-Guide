@@ -3,29 +3,22 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Best_Practices_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter id="chap-Best_Practices_Guide-Test_Chapter">
-	<title>Test Chapter</title>
+<chapter id="chap-Best_Practices_Guide-Clusters">
+	<title>Clusters</title>
 	<para>
-		This is a test paragraph
+		Clusters are the smallest cloud organizational unit.
 	</para>
-	<section id="sect-Best_Practices_Guide-Test_Chapter-Test_Section_1">
-		<title>Test Section 1</title>
+	<section id="sect-Best_Practices_Guide-Clusters-Host_Density">
+		<title>Host Density</title>
 		<para>
-			This is a test paragraph in a section
+			Citrix recommends a maximum of six hosts per cluster.  You can have a virtually unlimited number of clusters per pod and the number of storage pools per cluster does not matter.
 		</para>
 	</section>
 	
-	<section id="sect-Best_Practices_Guide-Test_Chapter-Test_Section_2">
-		<title>Test Section 2</title>
+	<section id="sect-Best_Practices_Guide-Clusters-Switch_Density">
+		<title>Network Switch Density</title>
 		<para>
-			This is a test paragraph in Section 2
-			<orderedlist>
-				<listitem>
-					<para>
-						listitem text
-					</para>
-				</listitem>
-			</orderedlist>
+			Multiple clusters can be used per pod to achieve a certain switch density.
 		</para>
 	</section>
 
