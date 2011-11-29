@@ -3,29 +3,34 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Best_Practices_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter id="chap-Best_Practices_Guide-Test_Chapter">
-	<title>Test Chapter</title>
+<chapter id="chap-Best_Practices_Guide-Hosts">
+	<title>Hypervisor Hosts</title>
 	<para>
-		This is a test paragraph
+		
 	</para>
-	<section id="sect-Best_Practices_Guide-Test_Chapter-Test_Section_1">
-		<title>Test Section 1</title>
-		<para>
-			This is a test paragraph in a section
-		</para>
+	<section id="sect-Best_Practices_Guide-Hosts-Identical_Setup">
+		<title>Setting up your hosts</title>
+		<para>It is increadibly important that the host hardware is identical with respect to the processors, number of network interface cards (NICs), and the way the network is setup on all hosts.</para>
+	<section id="sect-Best_Practices_Guide-Hosts-Software">
+		<title>Hypervisor Software</title>
+		<para>CloudStack currently supports the following hypervisor software versions:</para>
+			<itemizedlist>
+				<listitem>
+					<para>XenServer 5.6 SP2</para>
+				</listitem>
+				<listitem>
+					<para>VMWare x with vSphere</para>
+				</listitem>
+				<listitem>
+					<para>KVM x</para>
+				</listitem>
+			</itemizedlist>
 	</section>
 	
-	<section id="sect-Best_Practices_Guide-Test_Chapter-Test_Section_2">
-		<title>Test Section 2</title>
+	<section id="sect-Best_Practices_Guide-Hosts-Capacity">
+		<title>Host Capacity and Overprovisioning</title>
 		<para>
-			This is a test paragraph in Section 2
-			<orderedlist>
-				<listitem>
-					<para>
-						listitem text
-					</para>
-				</listitem>
-			</orderedlist>
+			Host capacity should generally be modeled in terms of RAM for the guests.  Storage and CPU may be overprovisioned.  RAM may not.  RAM is usually the limiting factor in capacity designs.
 		</para>
 	</section>
 
