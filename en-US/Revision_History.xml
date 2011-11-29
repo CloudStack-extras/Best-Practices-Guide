@@ -8,16 +8,18 @@
 	<simpara>
 		<revhistory>
 			<revision>
-				<revnumber>0-0</revnumber>
+				<revnumber>2.2.13-0</revnumber>
 				<date>Tue Nov 29 2011</date>
 				<author>
-					<firstname>Dude</firstname>
-					<surname>McPants</surname>
-					<email>Dude.McPants@example.com</email>
+					<firstname>Eric</firstname>
+					<surname>Christensen</surname>
+					<email>eric.christensen@citrix.com</email>
 				</author>
 				<revdescription>
 					<simplelist>
-						<member>Initial creation of book by publican</member>
+						<member>Initial creation of book by publican.</member>
+						<member>Updated default text to include CloudStack-specific text.</member>
+						<member>Added initial information.</member>
 					</simplelist>
 				</revdescription>
 			</revision>
