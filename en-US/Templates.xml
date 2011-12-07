@@ -3,31 +3,22 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Best_Practices_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter id="chap-Best_Practices_Guide-Test_Chapter">
-	<title>Test Chapter</title>
+<chapter id="chap-Best_Practices_Guide-Templates">
+	<title>Templates</title>
 	<para>
-		This is a test paragraph
+		
 	</para>
-	<section id="sect-Best_Practices_Guide-Test_Chapter-Test_Section_1">
-		<title>Test Section 1</title>
+	<section id="sect-Best_Practices_Guide-Templates-XenServer">
+		<title>Templates in XenServer</title>
 		<para>
-			This is a test paragraph in a section
+			When running <indexterm><primary>XenServer</primary></indexterm>, install PV drivers and Xen tools on each template you create as this will enable live migration and clean guest shutdown.
 		</para>
 	</section>
 	
-	<section id="sect-Best_Practices_Guide-Test_Chapter-Test_Section_2">
-		<title>Test Section 2</title>
+	<section id="sect-Best_Practices_Guide-Templates-vSphere">
+		<title>Templates in vSphere</title>
 		<para>
-			This is a test paragraph in Section 2
-			<orderedlist>
-				<listitem>
-					<para>
-						listitem text
-					</para>
-				</listitem>
-			</orderedlist>
+			When running <indexterm><primary>vSphere</primary></indexterm>, install VMware Tools on each template that you create as this will enable console view to work properly
 		</para>
 	</section>
-
 </chapter>
-
