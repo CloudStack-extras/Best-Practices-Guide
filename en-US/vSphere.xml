@@ -26,6 +26,7 @@
 				<listitem><para>Put all target ESXi hypervisors in a Cluster in a separate Datacenter in vCenter.</para></listitem>
 				<listitem><para>The cluster that will be managed by CloudStack product should not contain any VMs.  Do not run the management server, vCenter or any other VMs on the cluster that is designated for CloudStack use.  Create  a separate cluster for use of CloudStack and make sure that they are no VMs in this cluster.</para></listitem>
 				<listitem><para>All the required VLANS must be trunked into all the ESXi hypervisor hosts.  These would include the VLANS for Management, Storage, vMotion, and guest VLANs.  The guest VLAN (used in Advanced Networking; see Network Setup on page 18) is a contiguous range of VLANs that will be managed by the CloudStack Product. CloudStack does not support Distributed vSwitches in VMware.</para></listitem>
+			</itemizedlist>
 		</section>
 	</section>
         <section id="sect-Best_Practices_Guide-vSphere-Networking">
