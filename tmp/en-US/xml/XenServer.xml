@@ -3,23 +3,27 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Best_Practices_Guide.ent">
 %BOOK_ENTITIES;
 ]>
-<chapter id="chap-Best_Practices_Guide-XenServer">
+<chapter id="chap-Best_Practices_Guide-XenServer" lang="en-US">
 	<title>XenServer</title>
-	<para>
+	 <para>
+
 	</para>
-	<section id="sect-Best_Practices_Guide-XenServer-Hardware">
+	 <section id="sect-Best_Practices_Guide-XenServer-Hardware">
 		<title>Hardware</title>
-		<para>
+		 <para>
 			All hosts must be 64-bit and must support HVM (Intel-VT or AMD-V enabled). All Hosts within a Cluster must be homogeneous. That means the CPUs must be of the same type, count, and feature flags. See http://docs.vmd.citrix.com/XenServer/4.0.1/reference/ch02.html for more information on homogeneous XenServer hosts.
 		</para>
+
 	</section>
 	
-	<section id="sect-Best_Practices_Guide-XenServer-Reusing_Servers">
+	 <section id="sect-Best_Practices_Guide-XenServer-Reusing_Servers">
 		<title>Reusing Servers</title>
-		<para>
-			You must re-install Citrix XenServer if you are going to re-use a host from a previous install.<indexterm><primary>XenServer</primary><secondary>Reusing Servers</secondary></indexterm>
+		 <para>
+			You must re-install Citrix XenServer if you are going to re-use a host from a previous install.
 		</para>
+
 	</section>
+	
 
 </chapter>
 

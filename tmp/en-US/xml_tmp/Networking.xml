@@ -14,19 +14,19 @@
 	<section id="sect-Best_Practices_Guide-Networking-IP_Address_Planning">
 		<title>IP Address Planning</title>
 		<para>
-			The administrator should provide private IP addresses <indexterm><primary>IP Addresses</primary><secondary>Private</secondary></indexterm> for the system in each pod and provision them in CloudStack.	
+			The administrator should provide <indexterm><primary>private IP addresses</primary></indexterm> for the system in each pod and provision them in CloudStack.	
 		</para>
 	</section>
 	<section id="sect-Best_Practices_Guide-Networking-NIC_Bonding">
 		<title>NIC Bonding</title>
 		<para>
-			Network Interface Card, or NIC, bonding <indexterm><primary>Bonding</primary></indexterm> is important to maintaining connectivity throughout your cloud when network problems loom.  When done properly, NIC bonding<indexterm><primary>Network Bonding</primary></indexterm> provides a redundant path for data to flow in the event that one network fails.  Because bonding is generally managed through the hypervisor, the procedure for creating bonds can differ depending on the software being used.  Common among all hypervisors, however, is the requirement of network interfaces to be addressed identically on all hosts.
+			Network Interface Card, or NIC, <indexterm><primary>bonding</primary></indexterm> is important to maintaining connectivity throughout your cloud when network problems loom.  When done properly, <indexterm><primary>NIC bonding</primary></indexterm> provides a redundant path for data to flow in the event that one network fails.  Because bonding is generally managed through the hypervisor, the procedure for creating bonds can differ depending on the software being used.  Common among all hypervisors, however, is the requirement of network interfaces to be addressed identically on all hosts.
 		</para>
 	</section>
 	<section id="sect-Best_Practices_Guide-Networking-vSphere">
 		<title>Networking in vSphere</title>
 		<para>
-			For vSphere with advanced virtual networking, we recommend provisioning enough private IPs for your total number of customers, plus enough for the required CloudStack System VMs. Typically, about 10 additional IPs are required for the System VMs. For more information about System VMs, see Working with System Virtual Machines in the Administrator's Guide. <indexterm><primary>vSphere</primary><secondary>Advanced Virtual Networking</secondary></indexterm>
+			For vSphere with advanced virtual networking, we recommend provisioning enough private IPs for your total number of customers, plus enough for the required CloudStack System VMs. Typically, about 10 additional IPs are required for the System VMs. For more information about System VMs, see Working with System Virtual Machines in the Administrator's Guide.
 		</para>
 		<para>
 			The Management Servers communicate with VMware vCenter servers on port 443 (HTTPs).
@@ -35,13 +35,13 @@
         <section id="sect-Best_Practices_Guide-Networking-KVM_and_XenServer">
                 <title>Networking in KVM and XenServer</title>
                 <para>
-			For KVM and XenServer, the recommended number of private IPs per Pod is one per host. If you expect a Pod to grow, add enough private IPs now to accommodate the growth. <indexterm><primary>KVM</primary><secondary>Networking</secondary></indexterm><indexterm><primary>XenServer</primary><secondary>Networking</secondary></indexterm>
+			For KVM and XenServer, the recommended number of private IPs per Pod is one per host. If you expect a Pod to grow, add enough private IPs now to accommodate the growth.
 		</para>
 		<para>
 			When Advanced Virtual networking is being used, the number of private IP addresses available in each Pod varies depending on which hypervisor is running on the nodes in that Pod. Citrix XenServer and KVM use link-local addresses, which in theory provide more than 65,000 private IP addresses within the address block. As the Pod grows over time, this should be more than enough for any reasonable number of hosts as well as IP addresses for guest virtual routers. VMWare ESXi, by contrast uses any administrator-specified subnetting scheme, and the typical administrator provides only 255 IPs per Pod. Since these are shared by physical machines, the guest virtual router, and other entities, it is possible to run out of private IPs when scaling up a Pod whose nodes are running ESXi.
 		</para>
 		<para>
-			To ensure adequate headroom to scale private IP space in an ESXi Pod when Advanced Virtual networking is enabled, use one or more of the following techniques:<indexterm><primary>IP Addresses</primary><secondary>Private</secondary></indexterm>
+			To ensure adequate headroom to scale private IP space in an ESXi Pod when Advanced Virtual networking is enabled, use one or more of the following techniques:
 		</para>
 		<itemizedlist>
 			<listitem>

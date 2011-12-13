@@ -17,7 +17,7 @@
 	<section id="sect-Best_Practices_Guide-XenServer-Reusing_Servers">
 		<title>Reusing Servers</title>
 		<para>
-			You must re-install Citrix XenServer if you are going to re-use a host from a previous install.<indexterm><primary>XenServer</primary><secondary>Reusing Servers</secondary></indexterm>
+			You must re-install Citrix XenServer if you are going to re-use a host from a previous install.
 		</para>
 	</section>
 

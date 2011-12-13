@@ -11,14 +11,14 @@
 	<section id="sect-Best_Practices_Guide-Templates-XenServer">
 		<title>Templates in XenServer</title>
 		<para>
-			When running XenServer <indexterm><primary>XenServer</primary><secondary>Templates</secondary></indexterm>, install PV drivers and Xen tools on each template you create as this will enable live migration and clean guest shutdown.
+			When running <indexterm><primary>XenServer</primary></indexterm>, install PV drivers and Xen tools on each template you create as this will enable live migration and clean guest shutdown.
 		</para>
 	</section>
 	
 	<section id="sect-Best_Practices_Guide-Templates-vSphere">
 		<title>Templates in vSphere</title>
 		<para>
-			When running vSphere<indexterm><primary>vSphere</primary><secondary>Templates</secondary></indexterm>, install VMware Tools on each template that you create as this will enable console view to work properly
+			When running <indexterm><primary>vSphere</primary></indexterm>, install VMware Tools on each template that you create as this will enable console view to work properly
 		</para>
 	</section>
 </chapter>

@@ -6,7 +6,7 @@
 <chapter id="chap-Best_Practices_Guide-Primary_Storage">
 	<title>Primary Storage</title>
 	<para>
-		Primary Storage<indexterm><primary>Primary Storage</primary></indexterm> is the storage used by hypervisors to store virtual machines.  Depending on the hypervisor software, the primary storage could be an NFS share, fiber channel, or...
+		<indexterm><primary>Primary Storage</primary></indexterm> is the storage used by hypervisors to store virtual machines.  Depending on the hypervisor software, the primary storage could be an NFS share, fiber channel, or...
 	</para>
 	<section id="sect-Best_Practices_Guide-Primary_Storage-Per_Cluster">
 		<title>Primary Storage per Cluster</title>
@@ -23,7 +23,7 @@
 	<section id="sect-Best_Practices_Guide-Primary_Storage-Utilizing_RAID">
 		<title>Utilizing RAID</title>
 		<para>
-			It is important that the storage server contain many large disks and use a hardware RAID<indexterm><primary>RAID</primary></indexterm> controller.  Hardware RAID is faster than software RAID and has the added bonus of supporting hot plug functionality independent of the operating system so you can replace faulty disks without impacting the running operating system.
+			It is important that the storage server contain many large disks and use a hardware <indexterm><primary>RAID</primary></indexterm> controller.  Hardware RAID is faster than software RAID and has the added bonus of supporting hot plug functionality independent of the operating system so you can replace faulty disks without impacting the running operating system.
 		</para>
         </section>
         <section id="sect-Best_Practices_Guide-Primary_Storage-Limiting_NFS_Export">
