@@ -14,7 +14,7 @@
 	</section>
 	<section id="sect-Best_Practices_Guide-Hosts-Software">
 		<title>Hypervisor Software</title>
-		<para>CloudStack currently supports the following hypervisor software versions:</para>
+		<para>CloudStack currently supports the following <indexterm><primary>hypervisor</primary> <secondary>software</secondary></indexterm> versions:</para>
 			<itemizedlist>
 				<listitem>
 					<para>XenServer 5.6 SP2</para>
@@ -23,7 +23,7 @@
 					<para>VMWare x with vSphere</para>
 				</listitem>
 				<listitem>
-					<para>KVM x</para>
+					<para>KVM x (on RHEL/CentOS 5.6 (64-bit), RHEL6 (64-bit), Fedora 14 (64-bit), and Ubuntu 10.04 LTS (64-bit)</para>
 				</listitem>
 			</itemizedlist>
 	</section>
