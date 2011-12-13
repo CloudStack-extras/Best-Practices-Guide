@@ -18,7 +18,7 @@
 				<listitem><para>Must be 64-bit.</para></listitem>
 				<listitem><para>Must support HVM (Intel-VT or AMD-V enabled).</para></listitem>
 				<listitem><para>Within a single cluster, the hosts must be homogenous. The CPUs must be of the same type, count, and feature flags.</para></listitem>
-				<listitem><para>Within a single cluster, the hosts must be of the same kernel version.  For example, if one Host is RHEL6 64 bit, they must all be RHEL6 64 bit.</para></listitem>
+				<listitem><para><indexterm><primary>KVM</primary><secondary>kernel versions</secondary></indexterm>Within a single cluster, the hosts must be of the same kernel version.  For example, if one Host is RHEL6 64 bit, they must all be RHEL6 64 bit.</para></listitem>
 			</itemizedlist>
 		</section>
 	</section>
