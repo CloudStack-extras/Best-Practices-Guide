@@ -6,7 +6,13 @@
 <book>
 	<xi:include href="Book_Info.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	<xi:include href="Preface.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-	<xi:include href="Chapter.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	<xi:include href="Building_your_cloud.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+        <xi:include href="Clusters.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+        <xi:include href="Host.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+        <xi:include href="XenServer.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+        <xi:include href="Networking.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+        <xi:include href="Primary_Storage.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+        <xi:include href="Templates.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	<xi:include href="Revision_History.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	<index />
 </book>
