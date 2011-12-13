@@ -4,14 +4,14 @@
 %BOOK_ENTITIES;
 ]>
 <authorgroup>
-<!--	<author>
-		<firstname>Eric</firstname>
-		<surname>Christensen</surname>
+	<author>
+		<firstname></firstname>
+		<surname></surname>
 		<affiliation>
-			<orgname>Citrix</orgname>
-			<orgdiv>Cloud Engineering</orgdiv>
+			<orgname></orgname>
+			<orgdiv></orgdiv>
 		</affiliation>
-		<email>eric.christensen@citrix.com</email>
-	</author> -->
+		<email></email>
+	</author> 
 </authorgroup>
 
