@@ -22,6 +22,7 @@
 		<para>
 			Network Interface Card, or NIC, <indexterm><primary>bonding</primary></indexterm> is important to maintaining connectivity throughout your cloud when network problems loom.  When done properly, <indexterm><primary>NIC bonding</primary></indexterm> provides a redundant path for data to flow in the event that one network fails.  Because bonding is generally managed through the hypervisor, the procedure for creating bonds can differ depending on the software being used.  Common among all hypervisors, however, is the requirement of network interfaces to be addressed identically on all hosts.
 		</para>
+	</section>
 	<section id="sect-Best_Practices_Guide-Networking-vSphere">
 		<title>Networking in vSphere</title>
 		<para>
@@ -103,6 +104,7 @@ The secondary storage NFS export is mounted by the secondary storage VM. Seconda
 					The Management Servers communicate with the KVM servers on port 22 (ssh).
 				</para>
 			</listitem>
+		</itemizedlist>
         </section>
 
 

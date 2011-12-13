@@ -11,6 +11,7 @@
 	<section id="sect-Best_Practices_Guide-Hosts-Identical_Setup">
 		<title>Setting up your hosts</title>
 		<para>It is increadibly important that the host hardware is identical with respect to the processors, number of network interface cards (NICs), and the way the network is setup on all hosts.</para>
+	</section>
 	<section id="sect-Best_Practices_Guide-Hosts-Software">
 		<title>Hypervisor Software</title>
 		<para>CloudStack currently supports the following hypervisor software versions:</para>
