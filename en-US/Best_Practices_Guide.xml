@@ -9,6 +9,7 @@
 	<xi:include href="Building_your_cloud.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="Clusters.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="Hosts.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+	<xi:include href="KVM.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="XenServer.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="vSphere.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="Networking.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
