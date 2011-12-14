@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Best_Practices_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-Best_Practices_Guide-Database">
+	<title>Database</title>
+	<para>
+	</para>
+	<section id="sect-Best_Practices_Guide-Database-Security">
+		<title>Security</title>
+		<para>On RHEL and CentOS, MySQL does not set a root password by default. It is very strongly recommended that you set a root password as a security precaution. Run the following commands, and substitute your own desired root password for passwd.
+
+<screen># service mysqld start
+
+# mysql -u root
+
+mysql> SET PASSWORD = PASSWORD('passwd');</screen>
+		</para>
+	</section>
+	
+</chapter>
+

@@ -14,6 +14,7 @@
         <xi:include href="vSphere.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="OVM.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="Networking.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+        <xi:include href="Database.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="Primary_Storage.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
         <xi:include href="Templates.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	<xi:include href="Revision_History.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
