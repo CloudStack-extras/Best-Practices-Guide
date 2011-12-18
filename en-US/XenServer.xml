@@ -17,6 +17,7 @@
 		<title>VM Limits</title>
 		<para>
 			<indexterm><primary>XenServer</primary><secondary>VM limits</secondary></indexterm>All hypervisors have limits on the number of virtual machines they can handle due to memory and other constraints.  In XenServer 5.x you should keep the number of virtual machines deployed on a host to 50 or less.  Some improvements have been seen in version 6.0 and that number has been increased to 90.
+		</para>
 	</section>
 	<section id="sect-Best_Practices_Guide-XenServer-Reusing_Servers">
 		<title>Reusing Servers</title>
