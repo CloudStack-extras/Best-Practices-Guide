@@ -8,13 +8,27 @@
 	<para>
 		Clusters are the smallest cloud organizational unit.
 	</para>
-	<section id="sect-Best_Practices_Guide-Clusters-Host_Density">
-		<title>Host Density</title>
+	<section id="sect-Best_Practices_Guide-Clusters-Limits">
+		<title>Recommended Limits</title>
 		<para>
-			Citrix recommends a maximum of six hosts per cluster.  You can have a virtually unlimited number of clusters per pod and the number of storage pools per cluster does not matter.
+			In order to maintain an efficient cloud, Citrix recommends the following logical limits when building your cloud:
 		</para>
-	</section>
-	
+		<itemizedlist>
+			<listitem>
+				<para>A maximum of six hosts per cluster.  You can have a virtually unlimited number of clusters per pod and the number of storage pools per cluster does not matter.</para>
+			</listitem>
+			<listitem>
+				<para>No more than 200 virtual disks per LUN.</para>
+			</listitem>
+			<listitem>
+				<para>Each hypervisor supports a maximum number of virtual machines per host.  It is important to follow the manufacturer's recommendations.</para>
+			</listitem>
+			<listitem>
+				<para>There are no practical limits on SRs per cluster.</para>
+			</listitem>
+		</itemizedlist>
+		<para>It is also important to take into consideration host downtime.  To maintain uptime wherever possible your cloud should be designed to have a host go down and have all VMs on that host migrate over to other hosts without violating the above recommendations.</para>
+	</section>	
 	<section id="sect-Best_Practices_Guide-Clusters-Switch_Density">
 		<title>Network Switch Density</title>
 		<para>
