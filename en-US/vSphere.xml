@@ -29,6 +29,11 @@
 			</itemizedlist>
 		</section>
 	</section>
+        <section id="sect-Best_Practices_Guide-vSphere-Limits">
+                <title>VM Limits</title>
+                <para>
+                        <indexterm><primary>vSphere</primary><secondary>VM limits</secondary></indexterm>All hypervisors have limits on the number of virtual machines they can handle due to memory and other constraints.  VMware vSphere supports 100 to 128 virtual machines per host.
+        </section>	
         <section id="sect-Best_Practices_Guide-vSphere-Networking">
                 <title>Networking</title>
                 <para>
