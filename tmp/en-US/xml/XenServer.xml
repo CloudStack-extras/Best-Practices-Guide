@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Best_Practices_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-Best_Practices_Guide-XenServer" lang="en-US">
+	<title>XenServer</title>
+	 <para>
+		<indexterm>
+			<primary>hypervisors</primary>
+			<secondary>XenServer</secondary>
+		</indexterm>
+		<indexterm>
+			<primary>XenServer</primary>
+			<see>hypervisors</see>
+		</indexterm>
+
+	</para>
+	 <section id="sect-Best_Practices_Guide-XenServer-Hardware">
+		<title>Hardware</title>
+		 <para>
+			All hosts must be 64-bit and must support HVM (Intel-VT or AMD-V enabled). All Hosts within a Cluster must be homogeneous. That means the CPUs must be of the same type, count, and feature flags. See http://docs.vmd.citrix.com/XenServer/4.0.1/reference/ch02.html for more information on homogeneous XenServer hosts.
+		</para>
+
+	</section>
+	
+	 <section id="sect-Best_Practices_Guide-XenServer-Limits">
+		<title>VM Limits</title>
+		 <para>
+			<indexterm>
+				<primary>hypervisors</primary>
+				<secondary>XenServer</secondary>
+				<tertiary>VM limits</tertiary>
+			</indexterm>
+			All hypervisors have limits on the number of virtual machines they can handle due to memory and other constraints. In XenServer 5.x you should keep the number of virtual machines deployed on a host to 50 or less. Some improvements have been seen in version 6.0 and that number has been increased to 90.
+		</para>
+
+	</section>
+	
+	 <section id="sect-Best_Practices_Guide-XenServer-Reusing_Servers">
+		<title>Reusing Servers</title>
+		 <para>
+			You must re-install Citrix XenServer if you are going to re-use a host from a previous install.
+			<indexterm>
+				<primary>hypervisors</primary>
+				<secondary>XenServer</secondary>
+				<tertiary>Reusing Servers</tertiary>
+			</indexterm>
+
+		</para>
+
+	</section>
+	
+	 <section id="sect-Best_Practices_Guide-XenServer-Networking">
+		<title>Networking</title>
+		 <para>
+			<indexterm>
+				<primary>hypervisors</primary>
+				<secondary>XenServer</secondary>
+				<tertiary>networking</tertiary>
+			</indexterm>
+			Once XenServer has been installed you may need to do some additional network configuration. If you plan on using NIC bonding, the NICs on all hosts in the Cluster must be cabled exactly the same. For example, if eth0 is in the private bond on one host in a cluster, then eth0 must be in the private bond on all hosts in the cluster.
+		</para>
+		 <para>
+			The IP address assigned for the private network interface must be static. It can be set on the host itself or obtained via static DHCP.
+		</para>
+		 <section id="sect-Best_Practices_Guide-XenServer-Networking-Bonding">
+			<title>NIC Bonding</title>
+			 <para>
+				<indexterm>
+					<primary>hypervisors</primary>
+					<secondary>XenServer</secondary>
+					<tertiary>network bonding</tertiary>
+				</indexterm>
+				XenServer supports Source Level Balancing (SLB) NIC bonding. You must set bonds on the first host added to a cluster. Then you must use xe commands to establish the same bonds in the second and subsequent hosts added to a cluster. Slave hosts in a cluster must be cabled exactly the same as the master. For example, if eth0 is in the private bond on the master, it must be in the private network for added slave hosts.
+			</para>
+
+		</section>
+		
+
+	</section>
+	
+
+</chapter>
+

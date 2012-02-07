@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Best_Practices_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-Best_Practices_Guide-OVM" lang="en-US">
+	<title>Oracle VM (OVM)</title>
+	 <para>
+		<indexterm>
+			<primary>hypervisors</primary>
+			<secondary>Oracle VM (OVM)</secondary>
+		</indexterm>
+
+	</para>
+	 <section id="sect-Best_Practices_Guide-OVM-Installation">
+		<title>Installation</title>
+		 <para>
+
+		</para>
+		 <section id="sect-Best_Practices_Guide-OVM-Installation-Prerequisites">
+			<title>Prerequisites and Constraints</title>
+			 <para>
+				All OVM Hosts must follow these guidelines:
+			</para>
+			 <itemizedlist>
+				<listitem>
+					<para>
+						Must be 64-bit.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						Must support HVM (Intel-VT or AMD-V enabled).
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						Within a single cluster, the hosts must be homogenous. The CPUs must be of the same type, count, and feature flags.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						<indexterm>
+							<primary>hypervisors</primary>
+							<secondary>Oracle VM (OVM)</secondary>
+							<tertiary>kernel versions</tertiary>
+						</indexterm>
+						Within a single cluster, the hosts must be of the same kernel version.
+					</para>
+				</listitem>
+
+			</itemizedlist>
+
+		</section>
+		
+
+	</section>
+	
+
+</chapter>
+

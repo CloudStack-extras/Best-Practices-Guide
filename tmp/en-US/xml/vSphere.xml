@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Best_Practices_Guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-Best_Practices_Guide-vSphere" lang="en-US">
+	<title>VMWare vSphere</title>
+	 <para>
+		<indexterm>
+			<primary>hypervisors</primary>
+			<secondary>vSphere</secondary>
+		</indexterm>
+		<indexterm>
+			<primary>VMWare</primary>
+			<see>hypervisors</see>
+		</indexterm>
+		<indexterm>
+			<primary>vSphere</primary>
+			<see>hypervisors</see>
+		</indexterm>
+
+	</para>
+	 <section id="sect-Best_Practices_Guide-vSphere-Installation">
+		<title>Installation</title>
+		 <para>
+
+		</para>
+		 <section id="sect-Best_Practices_Guide-vSphere-Installation-Prerequisites">
+			<title>Prerequisites and Constraints</title>
+			 <para>
+				<indexterm>
+					<primary>hypervisors</primary>
+					<secondary>vSphere</secondary>
+					<tertiary>installation prerequisites</tertiary>
+				</indexterm>
+				The following requirements must be met in order for the VMware vSphere installation to work properly:
+			</para>
+			 <itemizedlist>
+				<listitem>
+					<para>
+						VMware vCenter Standard Edition 4.1 must be installed and available to manage the vSphere Hosts.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						<indexterm>
+							<primary>hypervisors</primary>
+							<secondary>vSphere</secondary>
+							<tertiary>management ports</tertiary>
+						</indexterm>
+						vCenter must be configured to use the standard port 443 so that it can communicate with the CloudStack Management Server.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						You must re-install VMware ESXi if you are going to re-use a host from a previous install.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						<indexterm>
+							<primary>hypervisors</primary>
+							<secondary>vSphere</secondary>
+							<tertiary>supported versions</tertiary>
+						</indexterm>
+						The CloudStack requires VMware vSphere 4.1. VMware vSphere 4.0 is not supported.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						All hosts must be 64-bit and must support HVM (Intel-VT or AMD-V enabled). All Hosts within a Cluster must be homogenous. That means the CPUs must be of the same type, count, and feature flags.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						<indexterm>
+							<primary>hypervisors</primary>
+							<secondary>vSphere</secondary>
+							<tertiary>virtual networking</tertiary>
+						</indexterm>
+						The CloudStack private network must not be configured as a separate tagged virtual network. The CloudStack private network is the same as the vCenter management network, and will inherit its configuration. See Configure vCenter Management Network on page 50.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						<indexterm>
+							<primary>hypervisors</primary>
+							<secondary>vSphere</secondary>
+							<tertiary>ESX</tertiary>
+						</indexterm>
+						CloudStack requires ESXi. ESX is not supported.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						All resources used for CloudStack must be used for CloudStack only. CloudStack cannot shares instance of ESXi or storage with other management consoles. Do not share the same storage volumes that will be used by CloudStack with a different set of ESXi servers that are not managed by CloudStack.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						Put all target ESXi hypervisors in a Cluster in a separate Datacenter in vCenter.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						The cluster that will be managed by CloudStack product should not contain any VMs. Do not run the management server, vCenter or any other VMs on the cluster that is designated for CloudStack use. Create a separate cluster for use of CloudStack and make sure that they are no VMs in this cluster.
+					</para>
+				</listitem>
+				 <listitem>
+					<para>
+						<indexterm>
+							<primary>hypervisors</primary>
+							<secondary>vSphere</secondary>
+							<tertiary>VLANs</tertiary>
+						</indexterm>
+						All the required VLANs must be trunked into all the ESXi hypervisor hosts. These would include the VLANS for Management, Storage, vMotion, and guest VLANs. The guest VLAN (used in Advanced Networking; see Network Setup on page 18) is a contiguous range of VLANs that will be managed by the CloudStack Product. CloudStack does not support Distributed vSwitches in VMware.
+					</para>
+				</listitem>
+
+			</itemizedlist>
+
+		</section>
+		
+
+	</section>
+	
+	 <section id="sect-Best_Practices_Guide-vSphere-Limits">
+		<title>VM Limits</title>
+		 <para>
+			<indexterm>
+				<primary>hypervisors</primary>
+				<secondary>vSphere</secondary>
+				<tertiary>VM limits</tertiary>
+			</indexterm>
+			All hypervisors have limits on the number of virtual machines they can handle due to memory and other constraints. VMware vSphere supports 100 to 128 virtual machines per host.
+		</para>
+
+	</section>
+	
+	 <section id="sect-Best_Practices_Guide-vSphere-Networking">
+		<title>Networking</title>
+		 <para>
+			<indexterm>
+				<primary>hypervisors</primary>
+				<secondary>vSphere</secondary>
+				<tertiary>networking</tertiary>
+			</indexterm>
+
+		</para>
+		 <section id="sect-Best_Practices_Guide-vSphere-Networking-Increasing_Ports">
+			<title>Increasing Ports</title>
+			 <para>
+				By default a virtual switch on ESXi hosts is created with 56 ports. We recommend setting it to 4096, the maximum number of ports allowed. To do that, click the "Properties..." link for virtual switch (note this is not the Properties link for Networking).
+			</para>
+
+		</section>
+		
+
+	</section>
+	
+
+</chapter>
+
