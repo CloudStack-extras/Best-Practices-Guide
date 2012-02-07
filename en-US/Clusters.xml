@@ -15,7 +15,7 @@
 		</para>
 		<itemizedlist>
 			<listitem>
-				<para>>A maximum of six hosts per cluster.  You can have an unlimited number of clusters per pod and the number of storage pools per cluster does not matter.</para>
+				<para>A maximum of six hosts per cluster.  You can have an unlimited number of clusters per pod and the number of storage pools per cluster does not matter.</para>
 			</listitem>
 			<listitem>
 				<para>No more than 200 virtual disks per LUN.</para>
