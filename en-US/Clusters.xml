@@ -6,7 +6,7 @@
 <chapter id="chap-Best_Practices_Guide-Clusters">
 	<title>Clusters</title>
 	<para>
-		Clusters are the smallest cloud organizational unit.
+		In cloud organization, Clusters are the smallest organizational unit.  Hosts, running a common hypervisor, join together to form a cluster and receive virtual machines.
 	</para>
 	<section id="sect-Best_Practices_Guide-Clusters-Limits">
 		<title>Recommended Limits</title>
@@ -15,7 +15,7 @@
 		</para>
 		<itemizedlist>
 			<listitem>
-				<para>A maximum of six hosts per cluster.  You can have a virtually unlimited number of clusters per pod and the number of storage pools per cluster does not matter.</para>
+				<para>>A maximum of six hosts per cluster.  You can have an unlimited number of clusters per pod and the number of storage pools per cluster does not matter.</para>
 			</listitem>
 			<listitem>
 				<para>No more than 200 virtual disks per LUN.</para>
@@ -27,12 +27,12 @@
 				<para>There are no practical limits on SRs per cluster.</para>
 			</listitem>
 		</itemizedlist>
-		<para>It is also important to take into consideration host downtime.  To maintain uptime wherever possible your cloud should be designed to have a host go down and have all VMs on that host migrate over to other hosts without violating the above recommendations.</para>
+		<para><indexterm><primary>maintenance</primary><secondary>host downtime</secondary></indexterm>It is also important to take into consideration host downtime.  To maintain uptime whenever possible your cloud should be designed to have a host go down and have all VMs on that host migrate over to other hosts without violating the above recommendations.</para>
 	</section>	
 	<section id="sect-Best_Practices_Guide-Clusters-Switch_Density">
 		<title>Network Switch Density</title>
 		<para>
-			Multiple clusters can be used per pod to achieve a certain switch density.
+			<indexterm><primary>networking</primary><secondary>switch density</secondary></indexterm>Multiple clusters can be used per pod to achieve a certain switch density.  In advance networking, too many VLANs can be problematic.  To reduce the number of VLANs a cluster has to handle customers should be assigned to a particular cluster and not be scattered throughout the cloud.  This can be accomplished by setting the value <command>use.user.concentrated.pod.allocation</command> to <command>true</command>.
 		</para>
 	</section>
 

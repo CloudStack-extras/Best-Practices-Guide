@@ -6,10 +6,11 @@
 <chapter id="chap-Best_Practices_Guide-Database">
 	<title>MySQL Database</title>
 	<para>
+		<indexterm><primary>MySQL</primary><see>database</see></indexterm><indexterm><primary>database</primary><secondary>MySQL</secondary></indexterm>The <application>MySQL</application> database houses all information about your cloud.  It is imperative to protect the database against corruption, loss, unavailablilty.
 	</para>
 	<section id="sect-Best_Practices_Guide-Database-Security">
 		<title>Security</title>
-		<para>On RHEL and CentOS, MySQL does not set a root password by default. It is very strongly recommended that you set a root password as a security precaution. Run the following commands, and substitute your own desired root password for passwd.
+		<para><indexterm><primary>database</primary><secondary>security</secondary></indexterm>On RHEL and CentOS, MySQL does not set a root password by default. It is very strongly recommended that you set a root password as a security precaution. Run the following commands, and substitute your own desired root password for passwd.
 
 <screen># service mysqld start
 
@@ -20,7 +21,7 @@ mysql> SET PASSWORD = PASSWORD('passwd');</screen>
 	</section>
         <section id="sect-Best_Practices_Guide-Database-Replication">
 		<title>Replication</title>
-		<para>CloudStack supports database replication from one MySQL node to another.  Creating a replica is not a backup solution. You should develop a backup procedure for the MySQL data that is distinct from replication.</para>
+		<para><indexterm><primary>database</primary><secondary>replication</secondary></indexterm>CloudStack supports database replication from one MySQL node to another.  Creating a replica is not a backup solution. You should develop a backup procedure for the MySQL data that is distinct from replication.</para>
 		<para>Edit my.cnf on the master and add the following in the [mysqld] section below datadir.</para>
 		<screen>log_bin=mysql-bin
 server_id=1</screen>

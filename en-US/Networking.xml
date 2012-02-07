@@ -6,36 +6,33 @@
 <chapter id="chap-Best_Practices_Guide-Networking">
 	<title>Networking</title>
 	<para>
-		Networking is as important a component to your cloud as other hardware and software.  Without a good, redundant, high bandwidth network your cloud could have problems including long transfer times, virtual machine failures, and loss of data.
-	</para>
-	<para>
-		Generally speaking, ten-gigabit networking is generally recommended for storage access when larger servers that can support relatively more VMs are used.
+		<indexterm><primary>networking</primary></indexterm>Networking is as important a component to your cloud as other hardware and software.  Without a good, redundant, high bandwidth network your cloud could have problems including long transfer times, virtual machine failures, and loss of data.  Generally speaking, ten-gigabit networking is generally recommended for storage access when larger servers that can support relatively more VMs are used.
 	</para>
 	<section id="sect-Best_Practices_Guide-Networking-IP_Address_Planning">
 		<title>IP Address Planning</title>
 		<para>
-			The administrator should provide private IP addresses <indexterm><primary>IP Addresses</primary><secondary>Private</secondary></indexterm> for the system in each pod and provision them in CloudStack.	
+			Several network subnets are required to support all the different networks that go into an operational cloud.  Careful planning of IP addresses is necessary before deploying your cloud.  The administrator should provide private IP addresses <indexterm><primary>networking</primary><secondary>IP Addresses</secondary><tertiary>Private</tertiary></indexterm> for the system in each pod and provision them in CloudStack.
 		</para>
 	</section>
 	<section id="sect-Best_Practices_Guide-Networking-NIC_Bonding">
 		<title>NIC Bonding</title>
 		<para>
-			Network Interface Card, or NIC, bonding <indexterm><primary>Bonding</primary></indexterm> is important to maintaining connectivity throughout your cloud when network problems loom.  When done properly, NIC bonding<indexterm><primary>Network Bonding</primary></indexterm> provides a redundant path for data to flow in the event that one network fails.  Because bonding is generally managed through the hypervisor, the procedure for creating bonds can differ depending on the software being used.  Common among all hypervisors, however, is the requirement of network interfaces to be addressed identically on all hosts.
+			Network Interface Card, or NIC, bonding <indexterm><primary>networking</primary><secondary>bonding</secondary></indexterm> is important to maintaining connectivity throughout your cloud when network problems loom.  When done properly, NIC bonding provides a redundant path for data to flow in the event that one network fails.  Because bonding is generally managed through the hypervisor, the procedure for creating bonds can differ depending on the software being used.  Common among all hypervisors, however, is the requirement of network interfaces to be addressed identically on all hosts.
 		</para>
 	</section>
 	<section id="sect-Best_Practices_Guide-Networking-vSphere">
 		<title>Networking in vSphere</title>
 		<para>
-			For vSphere with advanced virtual networking, we recommend provisioning enough private IPs for your total number of customers, plus enough for the required CloudStack System VMs. Typically, about 10 additional IPs are required for the System VMs. For more information about System VMs, see Working with System Virtual Machines in the Administrator's Guide. <indexterm><primary>vSphere</primary><secondary>Advanced Virtual Networking</secondary></indexterm>
+			For vSphere with advanced virtual networking, we recommend provisioning enough private IPs for your total number of customers, plus enough for the required CloudStack System VMs. Typically, about 10 additional IPs are required for the System VMs. For more information about System VMs, see Working with System Virtual Machines in the Administrator's Guide. <indexterm><primary>hypervisors</primary><secondary>vSphere</secondary><tertiary>Advanced Virtual Networking</tertiary></indexterm>
 		</para>
 		<para>
-			The Management Servers communicate with VMware vCenter servers on port 443 (HTTPs).
+			The Management Servers communicate with VMware vCenter servers on port 443 (HTTPS).
 		</para>
 	</section>
         <section id="sect-Best_Practices_Guide-Networking-KVM_and_XenServer">
                 <title>Networking in KVM and XenServer</title>
                 <para>
-			For KVM and XenServer, the recommended number of private IPs per Pod is one per host. If you expect a Pod to grow, add enough private IPs now to accommodate the growth. <indexterm><primary>KVM</primary><secondary>Networking</secondary></indexterm><indexterm><primary>XenServer</primary><secondary>Networking</secondary></indexterm>
+			For KVM and XenServer, the recommended number of private IPs per Pod is one per host. If you expect a Pod to grow, add enough private IPs now to accommodate the growth. <indexterm><primary>hypervisors</primary><secondary>KVM</secondary><tertiary>Networking</tertiary></indexterm><indexterm><primary>hypervisors</primary><secondary>XenServer</secondary><tertiary>Networking</tertiary></indexterm>
 		</para>
 		<para>
 			When Advanced Virtual networking is being used, the number of private IP addresses available in each Pod varies depending on which hypervisor is running on the nodes in that Pod. Citrix XenServer and KVM use link-local addresses, which in theory provide more than 65,000 private IP addresses within the address block. As the Pod grows over time, this should be more than enough for any reasonable number of hosts as well as IP addresses for guest virtual routers. VMWare ESXi, by contrast uses any administrator-specified subnetting scheme, and the typical administrator provides only 255 IPs per Pod. Since these are shared by physical machines, the guest virtual router, and other entities, it is possible to run out of private IPs when scaling up a Pod whose nodes are running ESXi.

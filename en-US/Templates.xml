@@ -6,7 +6,7 @@
 <chapter id="chap-Best_Practices_Guide-Templates">
 	<title>Templates</title>
 	<para>
-		
+		Templates are virtual machines that have been customized for a specific purpose to allow easy implementation of new virtual machines of the same type.  An example would be a <trademark class='registered'>RHEL</trademark> 6.2 server with <trademark class='registered'>Apache</trademark> installed and hardened.  By creating a template from this virtual machine you can then make new installations of this virtual machine quickly.
 	</para>
 	<section id="sect-Best_Practices_Guide-Templates-Large_Templates">
 		<title>Large Templates</title>
@@ -15,14 +15,14 @@
 	<section id="sect-Best_Practices_Guide-Templates-XenServer">
 		<title>Templates in XenServer</title>
 		<para>
-			When running XenServer <indexterm><primary>XenServer</primary><secondary>Templates</secondary></indexterm>, install PV drivers and Xen tools on each template you create as this will enable live migration and clean guest shutdown.
+			When running XenServer<indexterm><primary>hypervisors</primary><secondary>XenServer</secondary><tertiary>Templates</tertiary></indexterm>, install PV drivers and Xen tools on each template you create as this will enable live migration and clean guest shutdown.
 		</para>
 	</section>
 	
 	<section id="sect-Best_Practices_Guide-Templates-vSphere">
 		<title>Templates in vSphere</title>
 		<para>
-			When running vSphere<indexterm><primary>vSphere</primary><secondary>Templates</secondary></indexterm>, install VMware Tools on each template that you create as this will enable console view to work properly
+			When running vSphere<indexterm><primary>hypervisors</primary><secondary>vSphere</secondary><tertiary>Templates</tertiary></indexterm>, install VMware Tools on each template that you create as this will enable console view to work properly.
 		</para>
 	</section>
 </chapter>
