@@ -4,9 +4,9 @@
 %BOOK_ENTITIES;
 ]>
 <chapter id="chap-Best_Practices_Guide-vSphere">
-	<title>VMWare vSphere</title>
+	<title>VMware vSphere</title>
 	<para>
-		<indexterm><primary>hypervisors</primary><secondary>vSphere</secondary></indexterm><indexterm><primary>VMWare</primary><see>hypervisors</see></indexterm><indexterm><primary>vSphere</primary><see>hypervisors</see></indexterm>
+		<indexterm><primary>hypervisors</primary><secondary>vSphere</secondary></indexterm><indexterm><primary>VMware</primary><see>hypervisors</see></indexterm><indexterm><primary>vSphere</primary><see>hypervisors</see></indexterm>
 	</para>
 	<section id="sect-Best_Practices_Guide-vSphere-Installation">
 		<title>Installation</title>
